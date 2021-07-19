@@ -1,0 +1,22 @@
+﻿
+<div class="container">
+    <form id="NumersSortForm" asp-controller="Home" asp-action="SaveAndSort" data-ajax-update="#NumberResultsDiv" data-ajax="true" data-ajax-mode="replace" method="get">
+        <div class="form-group">
+            <label for="numbersCsvLabel">Please enter numbers seperated by commas...</label>
+            <input type="text" id="numbersCsv" class="form-control" name="numbersCsv" placeholder="e.g. 1,3,2" /><br>
+        </div>
+        <div class="form-check">
+            <label for="OrderingLabel">Please choose Sorting Order...</label><br>
+            <input type="radio" name="Ordering" class="form-check-input" value="Ascending">
+            <label form-check-label for="radio1">Ascending</label><br>
+            <input type="radio" name="Ordering" class="form-check-input" value="Descending">
+            <label form-check-label for="radio2">Descending</label><br>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Sort">
+
+    </form>
+</div>
+<div id="NumberResultsDiv"></div>
+
+
+

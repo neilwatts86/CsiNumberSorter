@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CsiNumberSorter.DataAccess\CsiNumberSorter.DataAccess.csproj" />
+    <ProjectReference Include="..\CsiNumberSorter.Domain\CsiNumberSorter.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

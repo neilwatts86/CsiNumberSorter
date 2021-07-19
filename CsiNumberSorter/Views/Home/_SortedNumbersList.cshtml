@@ -1,0 +1,46 @@
+﻿@model CsiNumberSorter.Website.Models.SortedNumbersListItemsViewModel
+    <div>
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+
+
+        </script>
+
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Numbers</th>
+                    <th>Sort Time (ms)</th>
+                    <th>Ordering</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var numbers in Model.SortedNumbersListItems)
+                {
+                    <tr>
+                        <th>@numbers.NumbersCsv</th>
+                        <th>@numbers.ElapsedSortTime</th>
+                        <th>@numbers.Ordering</th>
+                    </tr>
+
+                }
+            <tfoot>
+                <tr>
+                    <th>Numbers</th>
+                    <th>Sort Time (ms)</th>
+                    <th>Ordering</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div>
+        <form id="ExportToJson" asp-controller="Home" asp-action="ExportToJson" data-ajax-update="#JsonDiv" data-ajax-complete="success" data-ajax="true" data-ajax-mode="replace" method="get">
+            <input class="btn btn-primary" type="submit" value="Export To Json">
+        </form>
+    </div>
+    <div id="JsonDiv">
+
+    </div>
+
